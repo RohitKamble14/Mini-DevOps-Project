@@ -38,6 +38,9 @@ jobs:
       
       - name: Run Docker container
         run: |
+
+          docker rm -f devops-hello-container || true
+          
           docker run -d -p 8080:8080 --name devops-hello-container devops-hello-app
           sleep 5
 
