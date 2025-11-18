@@ -62,13 +62,9 @@ http://localhost:9090/hello
 - (Bonus) Push Docker image to Docker Hub
 
 ---
+
 ###  **🔗** GitHub repo link
 ### https://github.com/RohitKamble14/Mini-DevOps-Project.git
-
-
-### **🔗** CI pipeline file
-
-![[ci 1.yml]]
 
 ---
 ##  Screenshot's
@@ -88,8 +84,8 @@ http://localhost:9090/hello
 | Short write-up describing steps | ✔ Included |
 
 ---
-## 👨‍💻 Author  
 
+## 👨‍💻 Author  
 Rohit Kamble
 
 ---
