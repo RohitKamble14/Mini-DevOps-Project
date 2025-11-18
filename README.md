@@ -63,10 +63,6 @@ http://localhost:9090/hello
 
 ---
 
-###  **🔗** GitHub repo link
-### https://github.com/RohitKamble14/Mini-DevOps-Project.git
-
----
 ##  Screenshot's
 
 ![Screenshot of hello response](https://github.com/user-attachments/assets/88e2d68c-2cad-4b13-99c6-09f997ebc3b7)
@@ -74,6 +70,7 @@ http://localhost:9090/hello
 ![Screenshot of pipeline success](https://github.com/user-attachments/assets/91af317f-baf3-456c-a27f-c2ee4a60540e)
 
 ---
+
 ## 📦 Expected Deliverables
 | Deliverable                     | Status     |
 | ------------------------------- | ---------- |
