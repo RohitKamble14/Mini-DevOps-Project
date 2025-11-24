@@ -1,16 +1,17 @@
 # Mini DevOps Project – Docker + GitHub Actions CI/CD
 
---- 
-## Project Overview
-## This mini DevOps project follows a complete CI/CD workflow:
-### Build a simple application → Dockerized it → Deploy CI pipeline using GitHub Actions.
+---
+
+## 📌 Project Overview
+This mini DevOps project demonstrates a complete CI/CD pipeline with deployment to AWS EC2:
+**Build → Dockerize → Test via GitHub Actions → Push to Docker Hub → Auto Deploy to EC2.**
 
 ---
 
-## Application Details
-### Simple Node.js web application with one endpoint:  **GET /hello**
-
-### Response: Hello from DevOps – Rohit Kamble
+## 🧑‍💻 Application Details
+- Built a simple Node.js application
+- Endpoint: `GET /hello`
+- Response: `Hello from DevOps – Rohit Kamble`
 
 ---
 
@@ -25,43 +26,42 @@
 
 ## 🪜 Steps Completed
 
-### **Step 1: Build a Simple Application**
-- Created a Node.js Express server
-- Implemented `/hello` endpoint
-- Tested successfully via browser
+### Step 1: Build Application
+- Created Node.js Express application with `/hello` endpoint
+- Verified locally via browser & curl
 
-### **Step 2: Dockerized the Application**
-- Created a Dockerfile and built an image
-- Exposed container port **8080**
-- Ran container locally using:
+### Step 2: Dockerize the Application
+- Wrote a Dockerfile
+- Built and ran Docker container locally
+- Exposed internal port 8080
+- Tested at: `http://localhost:9090/hello`
 
-```bash
-docker build -t devops-hello-app .
-```
+### Step 3: Push Code to GitHub
+Repository includes:
+- Source code (`app.js`)
+- `Dockerfile`
+- `.dockerignore`
+- `README.md`
+- GitHub Actions workflow file (`.github/workflows/ci.yml`)
 
-```bash
-docker run -d -p 9090:8080 --name devops-hello-container devops-hello-app
-```
-- Tested URL
-```bash
-http://localhost:9090/hello
-```
-### **Step 3: Push Code to GitHub**
-- Application source code
-- Dockerfile
-- .docker ignore
-- GitHub Actions CI pipeline file (.github/workflows/ci.yml)
+### Step 4: Continuous Integration (CI) – GitHub Actions
+CI workflow includes:
+1. Checkout code
+2. Install dependencies
+3. Build Docker image
+4. Run container and test `/hello`
+5. Push image to Docker Hub
 
-### **Step 4: Set up CI/CD using GitHub Actions**
-#### Pipeline processes:
-- Checkout repository code
-- Install dependencies
-- Build Docker image
-- Run Docker container
-- Test /hello endpoint via curl
-- (Bonus) Push Docker image to Docker Hub
+Trigger: on: push to master
 
----
+### Step 5: Continuous Deployment (CD) – Deploy to AWS EC2
+Automated deployment steps added to the same pipeline:
+1. Connect to AWS EC2 via SSH (using GitHub Secrets)
+2. Pull the latest image from Docker Hub
+3. Remove old container (if exists)
+4. Run latest container mapped to port **80 → 8080**
+
+Access application publicly: http://<EC2-PUBLIC-IP>/hello
 
 ##  Screenshot's
 
@@ -69,16 +69,22 @@ http://localhost:9090/hello
 
 ![Screenshot of pipeline success](https://github.com/user-attachments/assets/91af317f-baf3-456c-a27f-c2ee4a60540e)
 
+![CD Deployment](https://github.com/user-attachments/assets/cfae44d0-1eba-49c5-b076-77f5a269c20a)
+
+![EC2 Display](https://github.com/user-attachments/assets/01043e42-5cb6-4515-ba6e-bd7509982295)
+
 ---
 
 ## 📦 Expected Deliverables
-| Deliverable                     | Status     |
-| ------------------------------- | ---------- |
-| GitHub Repo Link                | ✔ Provided |
-| CI Pipeline File                | ✔ Included |
-| Screenshot: Pipeline success    | ✔ Provided |
-| Screenshot: `/hello` response   | ✔ Provided |
-| Short write-up describing steps | ✔ Included |
+| Item                      | Provided |
+| ------------------------- | -------- |
+| GitHub Repo               | ✔        |
+| Dockerfile                | ✔        |
+| CI/CD Workflow            | ✔        |
+| Screenshot: /hello output | ✔        |
+| Screenshot: CI Success    | ✔        |
+| Screenshot: CD Deployment | ✔        |
+| Short Write-Up            | ✔        |
 
 ---
 
