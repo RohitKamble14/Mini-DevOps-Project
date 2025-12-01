@@ -75,19 +75,6 @@ Access application publicly: http://<EC2-PUBLIC-IP>/hello
 
 ---
 
-## 📦 Expected Deliverables
-| Item                      | Provided |
-| ------------------------- | -------- |
-| GitHub Repo               | ✔        |
-| Dockerfile                | ✔        |
-| CI/CD Workflow            | ✔        |
-| Screenshot: /hello output | ✔        |
-| Screenshot: CI Success    | ✔        |
-| Screenshot: CD Deployment | ✔        |
-| Short Write-Up            | ✔        |
-
----
-
 ## 👨‍💻 Author  
 Rohit Kamble
 
